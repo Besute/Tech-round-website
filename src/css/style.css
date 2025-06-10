@@ -1,0 +1,45 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  color: white;
+  border: none;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+@font-face {
+  font-family: Futura PT Cond BOLD;
+  src: url(../fonts/futura-book/FuturaPTCondBold.otf);
+}
+.header {
+  height: 100vh;
+  width: 100%;
+  background-color: black;
+  position: relative;
+}
+.header__text {
+  font-family: Futura PT Cond BOLD;
+  font-size: 13rem;
+  width: 90rem;
+}
+.header__back {
+  background-color: rgba(43, 42, 42, 0.5);
+  height: inherit;
+  weight: inherit;
+}
+.header__circle {
+  position: absolute;
+}
+.header__circle_big {
+  background-color: black;
+  width: 20rem;
+  height: 20rem;
+  border-radius: 50%;
+  background-color: rgba(40, 201, 212, 0.3);
+  filter: blur(30px);
+  top: 30%;
+  left: 15%;
+}/*# sourceMappingURL=style.css.map */
