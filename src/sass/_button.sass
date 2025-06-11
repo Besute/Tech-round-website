@@ -1,13 +1,16 @@
 .button
-    padding: 2rem
-    border: 1.5px solid
-    border-image: radial-gradient(circle at center, #0015FF, #FF00D0) 1
-    position: relative
-    &::before
-        content: ""
-        position: absolute
-        
-    animation: 8s linear 0s infinite GradientMove 
+    display: flex
+    animation: 10s linear 0s infinite GradientMove 
+    border: 2px solid
+    border-radius: 4px
+    justify-content: center
+    align-items: center
+    font-family: Futura PT Cond LIGHT
+    &_text
+        display: block
+        width: fit-content
+        height: fit-content
     &_standart
         width: 35rem
         height: 6rem
+        font-size: 2.4rem

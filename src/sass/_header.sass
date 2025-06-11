@@ -3,8 +3,8 @@
     width: 100%
     background-color: black
     position: relative
+    font-family: Futura PT Cond BOLD
     &__text
-        font-family: Futura PT Cond BOLD
         font-size: 9rem
         width: 90rem
         color: transparent
@@ -12,10 +12,13 @@
         -webkit-background-clip: text
         -webkit-text-fill-color: transparent
         text-align: center
+        margin-bottom: 1rem
     &__p
         width: 55rem
         font-size: 3rem
         text-align: center
+        margin-bottom: 3rem
+        font-family: Futura PT Cond LIGHT
     &__main
         display: flex
         align-items: center
@@ -31,10 +34,37 @@
         position: absolute
         &_big
             background-color: black
-            width: 20rem
-            height: 20rem
+            width: 21rem
+            height: 21rem
             border-radius: 50%
-            background-color: rgba(40, 201, 212, 0.3)
-            filter: blur(30px)
-            top: 10%
-            left: 15%
+            filter: blur(70px)
+            &_pink
+                filter: blur(50px)
+                animation: 8s ease-in 0s infinite brightingBigPink
+                right: 10%
+                top: 5%
+                width: 23rem
+                height: 23rem
+                background-color: rgba(209, 40, 212, 0.3)   
+            &_cyan
+                animation: 8s ease-in 1s infinite brightingBig
+                background-color: rgba(40, 201, 212, 0.3)
+                top: 10%
+                left: 15%
+        &_small
+            background-color: black
+            width: 10rem
+            height: 10rem
+            border-radius: 50%
+            filter: blur(25px)
+            &_cyan
+                animation: 8s linear 1.5s infinite brightingSmall
+                background-color: rgba(40, 201, 212, 0.3)
+                top: 35%
+                left: 20%
+            &_blue
+                animation: 20s ease 1s infinite blueSmallMoves
+                background-color: rgba(36, 39, 107, 1)
+                filter: blur(5px)
+                bottom: 15%
+                left: 10%

@@ -14,15 +14,100 @@ html {
   font-family: Futura PT Cond BOLD;
   src: url(../fonts/futura-book/FuturaPTCondBold.otf);
 }
+@font-face {
+  font-family: Futura PT Cond LIGHT;
+  src: url(../fonts/futura-book/FuturaPTLight.otf);
+}
 @keyframes GradientMove {
   0% {
-    border: 1.5px solid green;
+    border-color: rgb(255, 0, 208);
   }
   50% {
-    border: 1.5px solid red;
+    border-color: rgb(0, 21, 255);
   }
   100% {
-    border: 1.5px solid green;
+    border-color: rgb(255, 0, 208);
+  }
+}
+@keyframes brightingBig {
+  0% {
+    width: 21rem;
+    height: 21rem;
+    filter: blur(70px);
+  }
+  50% {
+    width: 22rem;
+    height: 22rem;
+    filter: blur(80px);
+  }
+  100% {
+    width: 21rem;
+    height: 21rem;
+    filter: blur(70px);
+  }
+}
+@keyframes brightingSmall {
+  0% {
+    width: 10rem;
+    height: 10rem;
+    filter: blur(25px);
+  }
+  50% {
+    width: 12rem;
+    height: 12rem;
+    filter: blur(35px);
+  }
+  100% {
+    width: 10rem;
+    height: 10rem;
+    filter: blur(25px);
+  }
+}
+@keyframes brightingBigPink {
+  0% {
+    width: 23rem;
+    height: 23rem;
+    filter: blur(50px);
+  }
+  50% {
+    width: 24rem;
+    height: 24rem;
+    filter: blur(40px);
+  }
+  100% {
+    width: 23rem;
+    height: 23rem;
+    filter: blur(50px);
+  }
+}
+@keyframes blueSmallMoves {
+  0% {
+    width: 10rem;
+    height: 10rem;
+    bottom: 15%;
+    left: 10%;
+    filter: blur(5px);
+  }
+  33% {
+    width: 12rem;
+    height: 12rem;
+    bottom: 19%;
+    left: 14%;
+    filter: blur(2px);
+  }
+  66% {
+    width: 11rem;
+    height: 11rem;
+    left: 13%;
+    bottom: 16%;
+    filter: blur(3px);
+  }
+  100% {
+    width: 10rem;
+    height: 10rem;
+    bottom: 15%;
+    left: 10%;
+    filter: blur(5px);
   }
 }
 .header {
@@ -30,9 +115,9 @@ html {
   width: 100%;
   background-color: black;
   position: relative;
+  font-family: Futura PT Cond BOLD;
 }
 .header__text {
-  font-family: Futura PT Cond BOLD;
   font-size: 9rem;
   width: 90rem;
   color: transparent;
@@ -40,11 +125,14 @@ html {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   text-align: center;
+  margin-bottom: 1rem;
 }
 .header__p {
   width: 55rem;
   font-size: 3rem;
   text-align: center;
+  margin-bottom: 3rem;
+  font-family: Futura PT Cond LIGHT;
 }
 .header__main {
   display: flex;
@@ -64,28 +152,65 @@ html {
 }
 .header__circle_big {
   background-color: black;
-  width: 20rem;
-  height: 20rem;
+  width: 21rem;
+  height: 21rem;
   border-radius: 50%;
+  filter: blur(70px);
+}
+.header__circle_big_pink {
+  filter: blur(50px);
+  animation: 8s ease-in 0s infinite brightingBigPink;
+  right: 10%;
+  top: 5%;
+  width: 23rem;
+  height: 23rem;
+  background-color: rgba(209, 40, 212, 0.3);
+}
+.header__circle_big_cyan {
+  animation: 8s ease-in 1s infinite brightingBig;
   background-color: rgba(40, 201, 212, 0.3);
-  filter: blur(30px);
   top: 10%;
   left: 15%;
 }
+.header__circle_small {
+  background-color: black;
+  width: 10rem;
+  height: 10rem;
+  border-radius: 50%;
+  filter: blur(25px);
+}
+.header__circle_small_cyan {
+  animation: 8s linear 1.5s infinite brightingSmall;
+  background-color: rgba(40, 201, 212, 0.3);
+  top: 35%;
+  left: 20%;
+}
+.header__circle_small_blue {
+  animation: 20s ease 1s infinite blueSmallMoves;
+  background-color: rgb(36, 39, 107);
+  filter: blur(5px);
+  bottom: 15%;
+  left: 10%;
+}
 
 .button {
-  padding: 2rem;
-  border: 1.5px solid;
-  -o-border-image: radial-gradient(circle at center, #0015FF, #FF00D0) 1;
-     border-image: radial-gradient(circle at center, #0015FF, #FF00D0) 1;
-  position: relative;
-  animation: 8s linear 0s infinite GradientMove;
+  display: flex;
+  animation: 10s linear 0s infinite GradientMove;
+  border: 2px solid;
+  border-radius: 4px;
+  justify-content: center;
+  align-items: center;
+  font-family: Futura PT Cond LIGHT;
 }
-.button::before {
-  content: "";
-  position: absolute;
+.button_text {
+  display: block;
+  width: -moz-fit-content;
+  width: fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
 }
 .button_standart {
   width: 35rem;
   height: 6rem;
+  font-size: 2.4rem;
 }/*# sourceMappingURL=style.css.map */

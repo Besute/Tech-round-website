@@ -13,6 +13,7 @@ const Button = function({text, size}) {
 
 Button.propTypes = {
     text: PropTypes.string.isRequired,
+    size: PropTypes.string.isRequired,
 }
 
 export default Button
