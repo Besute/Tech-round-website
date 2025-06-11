@@ -5,12 +5,28 @@
     position: relative
     &__text
         font-family: Futura PT Cond BOLD
-        font-size: 13rem
+        font-size: 9rem
         width: 90rem
+        color: transparent
+        background: -webkit-radial-gradient(#06FFE2, #2454F0, #B301D7)
+        -webkit-background-clip: text
+        -webkit-text-fill-color: transparent
+        text-align: center
+    &__p
+        width: 55rem
+        font-size: 3rem
+        text-align: center
+    &__main
+        display: flex
+        align-items: center
+        flex-direction: column
     &__back
         background-color: rgba(43, 42, 42, 0.5)
         height: inherit
         weight: inherit
+        display: flex
+        align-items: center
+        justify-content: center
     &__circle
         position: absolute
         &_big
@@ -20,5 +36,5 @@
             border-radius: 50%
             background-color: rgba(40, 201, 212, 0.3)
             filter: blur(30px)
-            top: 30%
+            top: 10%
             left: 15%

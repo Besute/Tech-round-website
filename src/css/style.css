@@ -14,6 +14,17 @@ html {
   font-family: Futura PT Cond BOLD;
   src: url(../fonts/futura-book/FuturaPTCondBold.otf);
 }
+@keyframes GradientMove {
+  0% {
+    border: 1.5px solid green;
+  }
+  50% {
+    border: 1.5px solid red;
+  }
+  100% {
+    border: 1.5px solid green;
+  }
+}
 .header {
   height: 100vh;
   width: 100%;
@@ -22,13 +33,31 @@ html {
 }
 .header__text {
   font-family: Futura PT Cond BOLD;
-  font-size: 13rem;
+  font-size: 9rem;
   width: 90rem;
+  color: transparent;
+  background: -webkit-radial-gradient(#06FFE2, #2454F0, #B301D7);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-align: center;
+}
+.header__p {
+  width: 55rem;
+  font-size: 3rem;
+  text-align: center;
+}
+.header__main {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
 }
 .header__back {
   background-color: rgba(43, 42, 42, 0.5);
   height: inherit;
   weight: inherit;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 .header__circle {
   position: absolute;
@@ -40,6 +69,23 @@ html {
   border-radius: 50%;
   background-color: rgba(40, 201, 212, 0.3);
   filter: blur(30px);
-  top: 30%;
+  top: 10%;
   left: 15%;
+}
+
+.button {
+  padding: 2rem;
+  border: 1.5px solid;
+  -o-border-image: radial-gradient(circle at center, #0015FF, #FF00D0) 1;
+     border-image: radial-gradient(circle at center, #0015FF, #FF00D0) 1;
+  position: relative;
+  animation: 8s linear 0s infinite GradientMove;
+}
+.button::before {
+  content: "";
+  position: absolute;
+}
+.button_standart {
+  width: 35rem;
+  height: 6rem;
 }/*# sourceMappingURL=style.css.map */

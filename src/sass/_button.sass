@@ -1,0 +1,13 @@
+.button
+    padding: 2rem
+    border: 1.5px solid
+    border-image: radial-gradient(circle at center, #0015FF, #FF00D0) 1
+    position: relative
+    &::before
+        content: ""
+        position: absolute
+        
+    animation: 8s linear 0s infinite GradientMove 
+    &_standart
+        width: 35rem
+        height: 6rem

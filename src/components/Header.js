@@ -1,13 +1,14 @@
 import './../css/style.css'
+import Button from "./Button"
 
 function Header() {
     return (
-        <div className="header">
+        <div className="header"> 
             <div className="header__back">
-                <h1 className="header__text">Crafting Worlds, Igniting Adventures</h1>
-                <p className="header__p">We design immersive games that captivate players and push creative boundaries.</p>
-                <div className="button">
-                    <p className="button__text">Read about us</p>
+                <div className="header__main">
+                    <h1 className="header__text">Crafting Worlds, Igniting Adventures</h1>
+                    <p className="header__p">We design immersive games that captivate players and push creative boundaries.</p>
+                    <Button text="Read about us" size="standart"/>
                 </div>
             </div>
             <div className="header__circle header__circle_big_pink header__circle_big"></div>
